@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>model</title>
+    <style>
+        #model-box {
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+            position: relative;
+            top: 20vh;
+            left: 30%;
+            background-color: aquamarine;
+        }
+
+        /* #model{
+            width: 700px;
+            height: 700px;
+            border: 1px solid red;
+            
+        } */
+
+        #hide {
+            float: right;
+        }
+
+        form {
+            margin: 100px 20%;
+        }
+
+        #cap {
+            width: 174px;
+            height: 24px;
+            border: 1px solid rgb(21, 21, 36);
+            /* background-color: beige; */
+            color: black;
+            /* font-size:30px */
+            text-align: center;
+        }
+
+        input {
+            height: 20px;
+        }
+
+        #ref {
+            /* width:200px;
+            height:25px; */
+            border: 1px solid rgb(43, 41, 41);
+            padding: 2px 5px;
+            /* background-color: yellowgreen; */
+        }
+    </style>
+</head>
+
+<body id="model">
+    <!-- <div id="model"></div> -->
+
+    <script>
+        // setTimeout(run, 5000);
+        setInterval(run, 5000);
+        function run(){
+            let a = `<div id="model-box">
+                        <button onclick= "hide()" id="hide"> X </button>
+                        <form>
+                           <input type="text" placeholder="username" id="username"><br><br>
+                           <input type="password" placeholder="password" id="password"><br><br>
+                           <button onclick="return login()">login</button>
+                        </form>
+                    </div>`
+            document.querySelector('#model').innerHTML = a;
+        }
+
+        function hide(){
+            document.querySelector('#model').innerHTML = "";
+        }
+        
+    </script>
+
+
+</body>
+
+</html>
